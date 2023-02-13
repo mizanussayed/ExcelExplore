@@ -1,0 +1,60 @@
+# Build output
+bin/
+obj/
+
+# Nuget packages
+*.nupkg
+*.nuget.org
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Compiled Assets
+/ClientApp/dist/
+/wwwroot/dist/
+
+# .NET Core
+.vs/
+*.csproj.user
+
+# Visual Studio files
+*.opensdf
+*.sdf
+*.userprefs
+*.log
+
+# Visual Studio cache/options directory
+.vs/
+
+# MSTest test Results
+TestResults/
+
+# .NET Core CLI specific files
+.env
+.DS_Store
+*.lock.json
+*.pidb
+*.log
+*.rsp
+*.sou
+*.oprun
+*.xproj
+*.vspscc
+
+# NPM packages
+node_modules/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio Code User Settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# VSCode .NET Core Debugger configuration
+launch.json
+
