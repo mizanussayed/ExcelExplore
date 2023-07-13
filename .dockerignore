@@ -1,2 +1,15 @@
-bin/
-obj/
+# Ignore .NET Core build artifacts / directories
+**/bin/
+**/obj/
+**/out/
+**/.git/
+**/node_modules/
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Ignore Docker files
+Dockerfile*
+**/*.md

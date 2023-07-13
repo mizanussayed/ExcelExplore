@@ -1,0 +1,33 @@
+version: '3.4'
+services:
+  web:
+    image: docker.io/miz:ray
+    # build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    ports:
+      - "80"
+    # depends_on:
+    #   - db
+    restart: always
+    networks:
+      - appnet
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    volumes:
+      - ./nginx/logs:/var/log/nginx/
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+    networks:
+      - appnet
+networks:
+  appnet:
+    driver: bridge
+volumes:
+  dbdata:
+
