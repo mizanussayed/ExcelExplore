@@ -1,9 +1,13 @@
 # Ignore .NET Core build artifacts / directories
-**/bin/
-**/obj/
-**/out/
-**/.git/
-**/node_modules/
+bin/
+obj/
+.git/
+.gitignore
+.dockerignore
+*.md
+.vscode/
+nginx/
+.github/
 
 # Ignore Visual Studio files
 .vs/
@@ -12,4 +16,3 @@
 
 # Ignore Docker files
 Dockerfile*
-**/*.md
