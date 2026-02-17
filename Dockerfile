@@ -7,7 +7,7 @@ COPY . ./
 RUN dotnet publish \
     -c Release \
     -r linux-musl-x64 \
-    --self-contained true \
+    --self-contained false \
     --no-restore \
     -o /app/publish \
     /p:PublishTrimmed=true \
@@ -17,7 +17,7 @@ RUN dotnet publish \
     /p:DebugType=none \
     /p:DebugSymbols=false
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:10.0-alpine AS runtime
+FROM mcr.microsoft.com/dotnet/runtime:10.0-alpine AS runtime
 
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
